@@ -1,0 +1,9 @@
+name: Test
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt update && sudo apt list --installed
+      - run: sudo add-apt-repository -y ppa:ubuntugis/ppa
